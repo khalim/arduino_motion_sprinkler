@@ -36,7 +36,7 @@ void loop() {
   if (digitalRead(sensorPin) == HIGH) {
     // Turn the LED on
     digitalWrite(ledPin, HIGH);
-    digitalWrite(relay1Pin, HIGH);
+    digitalWrite(relay1Pin, LOW);
     
     // Tell the host computer we detected motion
     Serial.println(1);
@@ -46,7 +46,7 @@ void loop() {
   } else {
     // Turn the LED off
     digitalWrite(ledPin, LOW);
-    digitalWrite(relay1Pin, LOW);
+    digitalWrite(relay1Pin, HIGH);
   }
 }
 
