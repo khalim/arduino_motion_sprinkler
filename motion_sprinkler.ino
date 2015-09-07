@@ -1,9 +1,10 @@
 // Declare Constants
 const int sensorPin = 2;           // PIR Sensor is attached to digital pin 2
+
 const int ledPin = 13;             // Built-in LED
 const int ledBlinkTime = 500;      // Blink one for half a second while calibrating
 
-const int relay1Pin = 4;
+const int relay1Pin = 7;
 
 // Wait for the seonsor to calibrate (20 - 60 seconds according to datasheet)
 // 60 Seconds in milliseconds
@@ -38,7 +39,7 @@ void loop() {
     digitalWrite(relay1Pin, HIGH);
     
     // Tell the host computer we detected motion
-    Serial.print(1);
+    Serial.println(1);
     
     // Sleep for a second to prevent flooding the serial
     delay(1000);
